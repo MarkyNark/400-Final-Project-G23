@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
 
@@ -15,7 +15,7 @@ services:
       - ENV=production # Add any required environment variables
 
   jenkins:
-    image: jenkins/jenkins:lts-jdk11
+    image: jenkins/jenkins:lts-jdk17
     container_name: jenkins_container
     ports:
       - "8081:8080" # Jenkins web interface
