@@ -3,13 +3,13 @@ version: '3.8'
 services:
   desktop_app:
     build:
-      context: ./App/desktop_app
+      context: ./desktop_app
       dockerfile: dockerfile
     container_name: desktop_app_container
     ports:
       - "8080:8080" # Adjust the port mapping as needed
     volumes:
-      - ./App/desktop_app:/app
+      - ./desktop_app:/app
     environment:
       - ENV=production # Add any required environment variables
 
