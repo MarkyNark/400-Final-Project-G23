@@ -2,7 +2,6 @@ version: '3.8'
 
 services:
 
-
   desktop_app:
     build:
       context: ./desktop_app
@@ -16,7 +15,7 @@ services:
       - ENV=production # Add any required environment variables
 
   jenkins:
-    image: jenkins/jenkins:lts-jdk17
+    image: jenkins/jenkins:lts-jdk11
     container_name: jenkins_container
     ports:
       - "8081:8080" # Jenkins web interface
