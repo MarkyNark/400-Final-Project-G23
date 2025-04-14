@@ -9,7 +9,7 @@ pipeline {
         // and go through the Zap proxy waiting at 9888
         HTTP_PROXY = 'http://127.0.0.1:9888'
         // Default Java Home for Jenkins (JDK 17)
-        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk'
+        JAVA_HOME = '/opt/java/11.0.14/bin/java'
         PATH = "${JAVA_HOME}/bin:${PATH}"
    }
 
