@@ -9,7 +9,7 @@ pipeline {
         // and go through the Zap proxy waiting at 9888
         HTTP_PROXY = 'http://127.0.0.1:9888'
         // Default Java Home for Jenkins (JDK 17)
-        JAVA_HOME = '/opt/java/11.0.14/bin/java'
+        JAVA_HOME = '/opt/java/11.0.14'
         PATH = "${JAVA_HOME}/bin:${PATH}"
    }
 
@@ -20,7 +20,7 @@ pipeline {
     stage('Build') {
       environment {
         // Override JAVA_HOME to use JDK 11 for this stage
-        JAVA_HOME = '/opt/java/11.0.14/bin/java'
+        JAVA_HOME = '/opt/java/11.0.14'
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
@@ -33,7 +33,7 @@ pipeline {
     stage('Unit Tests') {
       environment {
         // Override JAVA_HOME to use JDK 11 for this stage
-        JAVA_HOME = '/opt/java/11.0.14/bin/java'
+        JAVA_HOME = '/opt/java/11.0.14'
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
@@ -51,7 +51,7 @@ pipeline {
     stage('Database Tests') {
       environment {
         // Override JAVA_HOME to use JDK 11 for this stage
-       
+        JAVA_HOME = '/opt/java/11.0.14'
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
