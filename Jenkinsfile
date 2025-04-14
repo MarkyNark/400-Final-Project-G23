@@ -20,7 +20,7 @@ pipeline {
     stage('Build') {
       environment {
         // Override JAVA_HOME to use JDK 11 for this stage
-        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk'
+        JAVA_HOME = '/opt/java/11.0.14/bin/java'
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
@@ -33,7 +33,7 @@ pipeline {
     stage('Unit Tests') {
       environment {
         // Override JAVA_HOME to use JDK 11 for this stage
-        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk'
+        JAVA_HOME = '/opt/java/11.0.14/bin/java'
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
@@ -51,7 +51,7 @@ pipeline {
     stage('Database Tests') {
       environment {
         // Override JAVA_HOME to use JDK 11 for this stage
-        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk'
+       
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
@@ -70,7 +70,7 @@ pipeline {
     stage('BDD Tests') {
       environment {
         // Override JAVA_HOME to use JDK 11 for this stage
-        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk'
+        JAVA_HOME = '/opt/java/11.0.14/bin/java'
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
